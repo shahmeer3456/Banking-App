@@ -1,0 +1,87 @@
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+
+# Database Configuration
+MONGODB_URI=mongodb://localhost:27017/banking_app
+MONGODB_URI_TEST=mongodb://localhost:27017/banking_app_test
+
+# JWT Configuration
+JWT_SECRET=your_jwt_secret_key_here
+JWT_EXPIRES_IN=24h
+JWT_REFRESH_SECRET=your_refresh_token_secret_here
+JWT_REFRESH_EXPIRES_IN=7d
+
+# Email Configuration (SMTP)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=hussainshahmeer87@gmail.com
+SMTP_PASS=gmpz lmhf ptxq seoh
+SMTP_FROM=Bank App <hussainshahmeer87@gmail.com>
+
+# Admin Configuration
+ADMIN_DEFAULT_EMAIL=admin@bankapp.com
+ADMIN_DEFAULT_PASSWORD=admin123
+ADMIN_PHONE=+1234567890
+
+# Security Configuration
+BCRYPT_SALT_ROUNDS=10
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+
+# Transaction Limits
+MAX_TRANSACTION_AMOUNT=1000000
+MIN_TRANSACTION_AMOUNT=10
+DAILY_TRANSACTION_LIMIT=50000
+
+# Payment Processing
+PROCESSING_FEE_PERCENTAGE=2.5
+ENABLE_INTERNATIONAL_TRANSFERS=false
+TRANSFER_LIMIT_LOCAL=50000
+TRANSFER_LIMIT_INTERNATIONAL=10000
+MINIMUM_BALANCE_REQUIRED=1000
+
+# Card Configuration
+CARD_NUMBER_PREFIX=5412
+CARD_EXPIRY_YEARS=5
+CARD_ISSUE_FEE=0
+CARD_ANNUAL_FEE=0
+CARD_REPLACEMENT_FEE=500
+
+# File Upload Configuration
+MAX_FILE_SIZE=5242880
+ALLOWED_FILE_TYPES=image/jpeg,image/png,application/pdf
+
+# Logging Configuration
+LOG_LEVEL=debug
+LOG_FILE_PATH=logs/app.log
+
+# Frontend URLs (CORS)
+FRONTEND_URL=http://localhost:3001
+ADMIN_FRONTEND_URL=http://localhost:3002
+
+# Cache Configuration
+REDIS_URL=redis://localhost:6379
+CACHE_TTL=3600
+
+# Backup Configuration
+BACKUP_ENABLED=true
+BACKUP_CRON=0 0 * * *
+BACKUP_PATH=./backups
+
+# Feature Flags
+ENABLE_2FA=true
+ENABLE_BIOMETRIC=true
+ENABLE_NOTIFICATIONS=true
+ENABLE_AUTO_LOGOUT=true
+AUTO_LOGOUT_TIME=30
+
+# Error Reporting
+ERROR_REPORTING_EMAIL=errors@bankapp.com
+
+# Remember to:
+# 1. Copy this file to .env
+# 2. Replace all placeholder values with actual values
+# 3. Keep .env file secure and never commit it to version control
+# 4. Update values based on environment (development/staging/production) 
